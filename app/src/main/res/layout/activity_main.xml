@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#8BFFEB3B"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,15 +23,55 @@
         app:layout_constraintVertical_bias="0.0">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/tvMainTitle"
             android:layout_width="131dp"
             android:layout_height="33dp"
+            android:layout_marginTop="25dp"
             android:fontFamily="casual"
-            android:text="TextView"
+            android:text="Hello there!"
             android:textSize="24sp"
             android:typeface="serif"
-            tools:layout_editor_absoluteX="143dp"
-            tools:layout_editor_absoluteY="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             tools:text="Hello there!" />
+
+        <EditText
+            android:id="@+id/edtToD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:ems="10"
+            android:hint="What's the time of day?"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvMainTitle" />
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="178dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="332dp"
+            android:layout_marginEnd="200dp"
+            android:backgroundTint="#E51F1F"
+            android:text="Reset"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtToD" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="178dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="332dp"
+            android:backgroundTint="#8BC34A"
+            android:text="Tell me"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.483"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtToD" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
