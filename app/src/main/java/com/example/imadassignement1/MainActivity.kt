@@ -34,11 +34,24 @@ class MainActivity : AppCompatActivity() {
         {
             //Input time of day here (morning, afternoon, night)
             timeOfDay = edtToD.text.toString()
-            //Outputting information from variables to spark
-            Toast.makeText(this, "Your code works somehow $timeOfDay", Toast.LENGTH_LONG).show()
+            //Outputting information from variables to spark with else ifs
+            if (timeOfDay.equals("Morning", ignoreCase = true)) {
+                tvMainTitle.text = "Send a Good Morning Text to a family member."
+            } else if (timeOfDay.equals("Mid-morning", ignoreCase = true)) {
+                tvMainTitle.text = "Reach out to a colleague with a quick thank you."
+            } else if (timeOfDay.equals("Afternoon", ignoreCase = true)) {
+                tvMainTitle.text = "Share a funny meme or interesting link with your friend."
+            } else if (timeOfDay.equals("Afternoon Snack Time", ignoreCase = true)) {
+                tvMainTitle.text = "Send a quick thinking of you message."
+            } else if (timeOfDay.equals("Dinner", ignoreCase = true)) {
+                tvMainTitle.text = "Call a friend or relative for a 5-minute catch-up."
+            } else if (timeOfDay.equals("After dinner", ignoreCase = true)) {
+                tvMainTitle.text = "Leave a thoughtful comment on a friends' post."
+            } else {
+                tvMainTitle.text = "Whoops! you seem to have made a typo. Try: Morning, Mid-morning, Afternoon, Afternoon Snack Time, Dinner, or After dinner. "
+            }
         }
 
         //Code ends here
     }//Override function onCreate
 }//class MainActivity
-//Data classes go below here
